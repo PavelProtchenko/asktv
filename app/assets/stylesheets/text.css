@@ -8,12 +8,12 @@ a {
 }
 
 .title-large {
-  font-size: 48px;
+  font-size: 42px;
   margin-bottom: 18px;
 }
 
 .title-medium {
-  font-size: 36px;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 12px;
 }
@@ -24,22 +24,20 @@ a {
 }
 
 .text-lead {
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 30px;
-}
-
-.text-small {
-  font-size: 12px;
-  font-style: italic;
-  line-height: 100%;
-  padding-bottom: 10px;
+  font-size: 20px;
+  line-height: 28px;
 }
 
 .text-medium {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
-  color: #666;
+}
+
+.text-small {
+  font-size: 14px;
+  font-style: italic;
+  line-height: 100%;
+  padding-bottom: 10px;
 }
 
 .text-center {

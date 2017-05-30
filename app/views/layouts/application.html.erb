@@ -10,7 +10,7 @@
   <body>
 
     <div class="header">
-      <div class="container"
+      <div class="container">
         <div class="header-logo">
           <h1 class="header-title"><%= link_to "Вопросы", root_path %></h1>
         </div>
@@ -19,7 +19,9 @@
 
 
     <div class="content">
-      <%= yield %>
+      <div class="container">
+        <%= yield %>
+      </div>
     </div>
 
   </body>
