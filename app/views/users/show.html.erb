@@ -15,6 +15,10 @@
     @<%= @user.username %>
   </h2>
 
+  <h2 class="title-small buffer-both">
+    <%= @questions.count %> <%= declansion(@questions.count, "вопрос", "вопроса", "вопросов") %>
+  </h2>
+
   <div class="user-ask-button container text-center">
     <%= link_to "Спроси меня", '', class: 'button button-light', id: 'ask-button' %>
   </div>
@@ -24,17 +28,17 @@
   <div class="user-question-form buffer-both">
     <div class="form">
       <%= form_for @new_question do |f| %>
-        <%= f.hidden_field :user_id %>
+          <%= f.hidden_field :user_id %>
 
-        <div class="form-field">
-          <%= f.label "Ваш вопрос для @#{@user.username}", class: 'form-label' %>
-          <%= f.text_area :text, class: 'form-textarea' %>
-        </div>
+          <div class="form-field">
+            <%= f.label "Ваш вопрос для @#{@user.username}", class: 'form-label' %>
+            <%= f.text_area :text, class: 'form-textarea' %>
+          </div>
 
-        <div class="form-action">
-          <%= submit_tag 'Задать вопрос', class: 'button button-small button-dark' %>
-        </div>
-      <% end %>
+          <div class="form-action">
+            <%= submit_tag 'Задать вопрос', class: 'button button-small button-dark' %>
+          </div>
+    <% end %>
     </div>
   </div>
 </div>
