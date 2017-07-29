@@ -44,6 +44,7 @@ GEM
     byebug (9.0.6)
     concurrent-ruby (1.0.5)
     erubi (1.6.0)
+    execjs (2.7.0)
     ffi (1.9.18)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
@@ -112,6 +113,8 @@ GEM
     thread_safe (0.3.6)
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
+    uglifier (3.2.0)
+      execjs (>= 0.3.0, < 3)
     web-console (3.5.1)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -131,6 +134,7 @@ DEPENDENCIES
   rails (~> 5.1.1)
   sqlite3
   tzinfo-data
+  uglifier
   web-console (>= 3.3.0)
 
 BUNDLED WITH

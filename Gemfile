@@ -8,11 +8,16 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'
+
+gem 'uglifier'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
