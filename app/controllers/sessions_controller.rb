@@ -4,10 +4,6 @@ class SessionsController < ApplicationController
 
   def create
     @user = User.authenticate(params[:email], params[:password])
-<<<<<<< HEAD
-=======
-    user = User.authenticate(params[:email], params[:password])
->>>>>>> 5b2a691b1efb848c2282696b6af60d64d3b42fbd
 
     if @user.present?
       session[:user_id] = @user.id
