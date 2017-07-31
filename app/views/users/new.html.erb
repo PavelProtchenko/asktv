@@ -31,6 +31,11 @@
         </div>
 
         <div class="form-field">
+          <%= f.label 'Выбор цвета', class: 'form-label' %>
+          <%= f.color_field :profile_color, class: 'form-text-field form-color-field' %>
+        </div>
+
+        <div class="form-field">
           <%= f.label :password, 'Пароль', class: 'form-label' %>
           <%= f.password_field :password, class: 'form-text-field' %>
         </div>

@@ -25,3 +25,14 @@
   border-radius: 3px;
   font-size: 16px;
 }
+
+.form-color-field {
+  border: 0;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+}
+
+.form-action {
+  margin-top: 20px;
+}

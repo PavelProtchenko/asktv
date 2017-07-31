@@ -16,6 +16,8 @@ class UsersController < ApplicationController
     redirect_to root_url, alert: 'Вы уже залогинены' if current_user.present?
     @user = User.new(user_params)
 
+    @user.profile_color = '#005a55'
+
     if @user.save
       session[:user_id] = @user.id
       redirect_to root_url, notice: 'Пользователь успешно зарегистрирован!'
@@ -52,6 +54,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation, :name, :username, :avatar_url)
+    params.require(:user).permit(:email, :password, :password_confirmation, :name, :username, :avatar_url, :profile_color)
   end
 end
