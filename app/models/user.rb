@@ -4,8 +4,13 @@ class User < ApplicationRecord
   # параметры работы модуля шифрования паролей
   ITERATIONS = 20000
   DIGEST = OpenSSL::Digest::SHA256.new
+  DEFAULT_COLOR = '#005a55'
 
   has_many :questions
+
+  before_create do
+    self.user = @user.profile_color
+  end
 
   before_validation :username_downcase
 
