@@ -6,7 +6,7 @@ class User < ApplicationRecord
   DIGEST = OpenSSL::Digest::SHA256.new
   DEFAULT_COLOR = '#005A55'
 
-  has_many :questions
+  has_many :questions, dependent: :destroy
 
   before_create :user_color
 
