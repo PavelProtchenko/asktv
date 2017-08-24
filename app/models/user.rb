@@ -8,11 +8,7 @@ class User < ApplicationRecord
 
   has_many :questions
 
-  before_create do
-    if self.profile_color.nil?
-      self.profile_color = DEFAULT_COLOR
-    end
-  end
+  before_create :user_color
 
   before_validation :username_downcase
 
@@ -63,5 +59,11 @@ class User < ApplicationRecord
 
   def username_downcase
     self.username.downcase!
+  end
+
+  def user_color
+    if self.profile_color.nil?
+      self.profile_color = DEFAULT_COLOR
+    end
   end
 end
