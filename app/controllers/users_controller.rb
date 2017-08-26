@@ -42,7 +42,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    current_user.destroy
+    @user.destroy
     redirect_to users_path, notice: 'Пользователь удалён!'
   end
 

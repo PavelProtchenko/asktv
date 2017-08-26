@@ -55,7 +55,7 @@
 
       <div class="column-1-2">
         <% if @user == current_user %>
-        <%= link_to 'Удалить профиль', current_user, class: 'button button-red button-small buffer-top', method: :delete,
+        <%= link_to 'Удалить профиль', @user, class: 'button button-red button-small buffer-top', method: :delete,
         data: {confirm: 'Хотите удалить?'} %>
       </div>
         <% end %>
