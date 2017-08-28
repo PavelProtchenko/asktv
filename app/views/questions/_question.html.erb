@@ -16,7 +16,6 @@
     <div class="question-date">
       <%= l(question.created_at, format: :short) %>
       <%= question.user.username %>
-    </div>
     <% if question.author %>
       <%= link_to "@#{question.author.username}", user_path(question.author.id) %>
     <% else %>
@@ -24,6 +23,7 @@
       <%= "Неизвестный пользователь" %>
       </div>
     <% end %>
+    </div>
 
   <% if question.user == current_user %>
     <div class="question-actions">
