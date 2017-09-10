@@ -1,0 +1,11 @@
+<div class="content-wrapper buffer-both text-center">
+  <div class="buffer-both">
+    <h1 class="title-medium"><%=@title %></h1>
+  </div>
+
+  <ul>
+    <% @questions.each do |question| %>
+      <li><%=question.text %></li>
+    <% end %>
+  </ul>
+</div>

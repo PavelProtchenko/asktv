@@ -25,4 +25,12 @@ module ApplicationHelper
       krokodilov
     end
   end
+
+  def set_hashtags(text)
+    regexp = /#[a-z_а-я0-9\-]+/i
+    text.gsub(regexp) do |name|
+      title = name.delete('#')
+      link_to(name, hashtag_path(title))
+    end.html_safe
+  end
 end

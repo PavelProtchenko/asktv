@@ -12,3 +12,11 @@
     </div>
   <% end %>
 </div>
+
+<div class="content-wrapper buffer-both text-center">
+  <% @hashtags.each do |hashtag| %>
+    <div class="users-list-item">
+      <%= link_to hashtag.title, hashtag_path(hashtag.title) %>
+    </div>
+  <% end %>
+</div>
